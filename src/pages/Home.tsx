@@ -2,6 +2,8 @@ import illustrationImg from '../asserts/images/illustration.svg';
 import logoImg from '../asserts/images/logo.svg';
 import googleIconImg from '../asserts/images/google-icon.svg';
 
+import '../styles/auth.scss';
+
 export function Home(){
     return(
         <div>
