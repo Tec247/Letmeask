@@ -6,7 +6,7 @@ import '../styles/auth.scss';
 
 export function Home(){
     return(
-        <div>
+        <div id='page-auth'>
             <aside>
                 <img src={illustrationImg} alt="ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
