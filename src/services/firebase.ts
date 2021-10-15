@@ -1,18 +1,11 @@
 // import {initializeApp} from 'firebase/app';
-
+require("dotenv").config();
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
 
 const firebaseConfig = {    
-  // apiKey: "AIzaSyDwJ-rzdjKV0JlvSvh9oSc142MtjMvk52c",
-  // authDomain: "letmeask-32d21.firebaseapp.com",
-  // databaseURL: "https://letmeask-32d21-default-rtdb.firebaseio.com",
-  // projectId: "letmeask-32d21",
-  // storageBucket: "letmeask-32d21.appspot.com",
-  // messagingSenderId: "540563329675",
-  // appId: "1:540563329675:web:0f26e039e87fe0b73d3a8e"
-
+  
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
     databaseURL: process.env.REACT_APP_DATABASE_URL,
@@ -28,5 +21,3 @@ const firebaseConfig = {
   const database = firebase.database();
 
   export {firebase, auth, database}
-
-  // initializeApp(firebaseConfig);
