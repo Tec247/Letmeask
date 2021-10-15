@@ -24,4 +24,5 @@ const firebaseConfig = {
   export {firebase, auth, database}
 
   // initializeApp(firebaseConfig);
+  //teste
   
