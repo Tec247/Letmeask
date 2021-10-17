@@ -1,5 +1,6 @@
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { auth, firebase } from "../services/firebase";
+import {AuthContext} from "../App";
 import illustrationImg from "../asserts/images/illustration.svg";
 import logoImg from "../asserts/images/logo.svg";
 import googleIconImg from "../asserts/images/google-icon.svg";
@@ -7,17 +8,17 @@ import googleIconImg from "../asserts/images/google-icon.svg";
 import "../styles/auth.scss";
 import { Button } from "../components/Button";
 
+
 export function Home() {
   const history = useHistory();
+  const {user,signInWithGoogle} = useContext(AuthContext);
 
-  function handleCreateRoom() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    async function handleCreateRoom() {
+    if(!user) {
+      await signInWithGoogle();
+    }
 
-    auth.signInWithPopup(provider).then((result) =>{
-      console.log(result);
-    });
-
-     history.push("/rooms/new");
+      history.push("/rooms/new");
   }
 
   return (
@@ -32,6 +33,7 @@ export function Home() {
       </aside>
 
       <main>
+        {/* <h1>{value}</h1> */}
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
 
