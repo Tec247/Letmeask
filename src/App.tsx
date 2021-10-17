@@ -35,7 +35,7 @@ function App() {
           id: uid,
           name: displayName,
           avatar: photoURL
-        })
+        });
       }
     })
   }, []);
