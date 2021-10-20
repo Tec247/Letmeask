@@ -1,10 +1,11 @@
 import firebase from 'firebase/compat/app';
 
+import "dotenv/config";
+
 import 'firebase/compat/auth';
 
 import 'firebase/compat/database';
 
-const dotenv = require('dotenv');
 
 const firebaseConfig = {
 
@@ -24,4 +25,3 @@ const auth = firebase.auth();
 const database = firebase.database();
 
 export { firebase, auth, database }
-dotenv.config();
