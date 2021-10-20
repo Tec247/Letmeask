@@ -1,7 +1,8 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
-import {AuthContextProvider} from "../src/contexts/AuthContext"
+import {AuthContextProvider} from "../src/contexts/AuthContext";
+import "dotenv/config";
 
 function App() {
  

@@ -1,7 +1,5 @@
 import firebase from 'firebase/compat/app';
 
-import "dotenv/config";
-
 import 'firebase/compat/auth';
 
 import 'firebase/compat/database';
