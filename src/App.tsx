@@ -5,7 +5,7 @@ import { Room } from "./pages/Room";
 import {AuthContextProvider} from "../src/contexts/AuthContext";
 import "dotenv/config";
 
-function App() {
+function App(): JSX.Element {
  
   return (
     <BrowserRouter>
