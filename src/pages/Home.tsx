@@ -81,3 +81,10 @@ export function Home() {
     </div>
   );
 }
+
+
+
+// yarn add @firebase/auth-types@0.11.0
+// yarn add @firebase/util@1.x
+// yarn add @testing-library/user-event@12.8.3
+// arn add @testing-library/dom@>=7.21.4
