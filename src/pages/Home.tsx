@@ -38,16 +38,19 @@ export function Home() {
       alert('Room does not exists.');
       return;
     }
-    history.push('/rooms${roomCode');
+
+    history.push(`/rooms/${roomCode}`);
   }
 
   return (
     <div id="page-auth">
       <aside>
+        
         <img
           src={illustrationImg}
           alt="ilustração simbolizando perguntas e respostas"
         />
+      
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
@@ -69,7 +72,7 @@ export function Home() {
              onChange={event => setRoomCode(event.target.value)}
              value={roomCode}
              />
-            <Button type="submit">
+            <Button type= "submit">
               Entrar na sala
             </Button>
           </form>
