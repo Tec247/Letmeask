@@ -5,6 +5,7 @@ import { NewRoom } from "./pages/NewRoom";
 import { Room } from "./pages/Room";
 import {AuthContextProvider} from "../src/contexts/AuthContext";
 import "dotenv/config";
+import { AdminRoom } from "./pages/AdminRoom";
 
 function App(): JSX.Element {
  
@@ -12,9 +13,10 @@ function App(): JSX.Element {
     <BrowserRouter>
       <AuthContextProvider>
       <Switch>
+      <Route path="/" exact component={Home} />
       <Route path="/rooms/new" exact component={NewRoom} />
       <Route path="/rooms/:id" component={Room} />
-      <Route path="/" exact component={Home} />
+      <Route path="/admin/rooms/:id" component={AdminRoom} />
       </Switch>
       </AuthContextProvider>
     </BrowserRouter>
