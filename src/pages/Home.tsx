@@ -39,6 +39,11 @@ export function Home() {
       return;
     }
 
+    if(roomRef.val().endedAt){
+      alert('Room already closed.');
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`);
   }
 
@@ -48,7 +53,7 @@ export function Home() {
         
         <img
           src={illustrationImg}
-          alt="ilustração simbolizando perguntas e respostas"
+          alt="Ilustração simbolizando perguntas e respostas"
         />
       
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
